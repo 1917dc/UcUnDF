@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f591154d-e079-408a-b799-cc49c52e68a5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SQLite_UnDF/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLite_UnDF/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLite_UnDF/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLite_UnDF/undf.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1717625384170</updated>
       <workItem from="1717625385163" duration="856000" />
-      <workItem from="1717626256667" duration="347000" />
+      <workItem from="1717626256667" duration="1531000" />
     </task>
     <servers />
   </component>
