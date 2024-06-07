@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="br.caelum.stella.core" type="repository">
+    <properties maven-id="br.com.caelum.stella:caelum-stella-core:2.1.6" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/br/com/caelum/stella/caelum-stella-core/2.1.6/caelum-stella-core-2.1.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
