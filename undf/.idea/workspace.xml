@@ -32,7 +32,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/luiz/Documents/GitHub/Gerenciador-Disciplinas-UnDF/undf/Java",
+    "last_opened_file_path": "/home/luiz/Documents/GitHub/Gerenciador-Disciplinas-UnDF/undf/Angular",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -45,8 +45,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.17011.90" />
       </set>
     </attachedChunks>
   </component>
@@ -61,6 +60,7 @@
       <workItem from="1717625385163" duration="856000" />
       <workItem from="1717626256667" duration="1531000" />
       <workItem from="1717756409427" duration="50000" />
+      <workItem from="1717802970702" duration="24000" />
     </task>
     <servers />
   </component>
