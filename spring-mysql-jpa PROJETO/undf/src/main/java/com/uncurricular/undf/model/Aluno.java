@@ -16,6 +16,9 @@ public class Aluno {
     private String senha;
     private String curso;
 
+    public Aluno() {
+    }
+
     public Long getId() {
         return id;
     }
