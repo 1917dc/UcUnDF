@@ -11,4 +11,5 @@ import java.util.List;
 @Repository
 public interface TurmaAlunoRepository extends JpaRepository<TurmaAluno, Long> {
     List<TurmaAluno> findByTurmaId(Long turmaId);
+    List<TurmaAluno> findTurmaAlunoByAlunoId(Long alunoId);
 }

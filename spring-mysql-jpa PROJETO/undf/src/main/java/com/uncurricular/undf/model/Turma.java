@@ -23,6 +23,11 @@ public class Turma {
     @OneToOne
     private Sala sala;
 
+    @ManyToMany
+    private List<TurmaAluno> alunos;
+
+
+
     public Turma() {
     }
 
@@ -71,5 +76,13 @@ public class Turma {
 
     public void setSala(Sala sala) {
         this.sala = sala;
+    }
+
+    public List<TurmaAluno> getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(List<TurmaAluno> alunos) {
+        this.alunos = alunos;
     }
 }

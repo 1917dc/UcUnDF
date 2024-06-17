@@ -1,7 +1,9 @@
 package com.uncurricular.undf.controller;
 
+import com.uncurricular.undf.model.Aluno;
 import com.uncurricular.undf.model.Professor;
 import com.uncurricular.undf.model.Turma;
+import com.uncurricular.undf.model.TurmaAluno;
 import com.uncurricular.undf.repository.ProfessorRepository;
 import com.uncurricular.undf.repository.TurmaAlunoRepository;
 import com.uncurricular.undf.repository.TurmaRepository;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/professores")
@@ -39,6 +42,7 @@ public class ProfessorController {
 
     @GetMapping("/{id}/turmas")
     public List<Turma> findTurmaByProfessorId(@PathVariable Long id){
-        return turmaRepository.findTurmaByProfessorId(id);
+        return turmaRepository.findTurmasByProfessorId(id);
     }
+
 }

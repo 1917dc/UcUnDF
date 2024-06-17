@@ -26,7 +26,7 @@ public class TurmaController {
 
 
     @GetMapping
-    public List<Turma> listar() {
+    public List<Turma> findAll() {
         return turmaRepository.findAll();
     }
 
@@ -40,21 +40,6 @@ public class TurmaController {
         return turmaAlunoRepository.findByTurmaId(id).stream()
                 .map(TurmaAluno::getAluno)
                 .collect(Collectors.toList());
-    }
-
-    @GetMapping("/{professor_id}/{id}/alunos")
-    public List<Aluno> findAlunosTurmaByProfessorId(@PathVariable Long professor_id, @PathVariable Long id){
-        List<Turma> turmas = turmaRepository.findTurmaByProfessorId(professor_id);
-        List<Aluno> alunos = null;
-
-        for(Turma turmasEach : turmas){
-            if(turmasEach.getId().equals(id)){
-                alunos = turmaAlunoRepository.findByTurmaId(id).stream()
-                        .map(TurmaAluno::getAluno)
-                        .toList();
-            }
-        }
-        return alunos;
     }
 
     @GetMapping("/{turma_id}/aluno/{aluno_id}")
