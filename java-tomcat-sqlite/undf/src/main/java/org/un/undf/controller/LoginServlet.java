@@ -11,19 +11,22 @@ import javax.servlet.http.HttpServletResponse;
 import org.un.undf.model.Aluno;
 import org.un.undf.model.AlunoDB;
 
+import static javax.servlet.http.HttpServletResponse.SC_NOT_FOUND;
+import static javax.servlet.http.HttpServletResponse.SC_OK;
+
 @WebServlet("/login")
 public class LoginServlet {
-	public Boolean logar(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+	public int logar(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		String cpf = request.getParameter("cpf");
 		String senha = request.getParameter("senha");
 		List<Aluno> alunos = AlunoDB.fetchAllAlunos();
 		
 		for (Aluno aluno : alunos) {
 			if (aluno.getCpf().equals(cpf) && aluno.getSenha().equals(senha)) {
-				return true;
+				return SC_OK;  // STATUS CODE 200
 			}
 		}
 		
-		return false;
+		return SC_NOT_FOUND; // STATUS CODE 404
 	}
 }

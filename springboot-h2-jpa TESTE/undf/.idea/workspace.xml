@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="205f787a-4782-45b4-b2e4-e1f97f1f3c7c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../java-tomcat-sqlite/undf/src/main/java/org/un/undf/controller/AlunosServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring-mysql-jpa PROJETO/undf/src/main/java/com/uncurricular/undf/api/model/Aluno.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring-mysql-jpa PROJETO/undf/src/main/java/com/uncurricular/undf/api/model/Disciplina.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring-mysql-jpa PROJETO/undf/src/main/java/com/uncurricular/undf/api/model/Feedback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring-mysql-jpa PROJETO/undf/src/main/java/com/uncurricular/undf/api/model/Professor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring-mysql-jpa PROJETO/undf/src/main/java/com/uncurricular/undf/api/model/Sala.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring-mysql-jpa PROJETO/undf/src/main/java/com/uncurricular/undf/api/model/Turma.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring-mysql-jpa PROJETO/undf/src/main/java/com/uncurricular/undf/api/model/TurmaAluno.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring-mysql-jpa PROJETO/undf/src/main/java/com/uncurricular/undf/api/model/TurmaProfessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springboot-mysql-jpa/undf/src/main/java/com/uncurricular/undf/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springboot-mysql-jpa/undf/src/main/java/com/uncurricular/undf/entities/Department.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springboot-mysql-jpa/undf/src/main/java/com/uncurricular/undf/entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springboot-mysql-jpa/undf/src/main/java/com/uncurricular/undf/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springboot-mysql-jpa/undf/src/main/resources/import.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-tomcat-sqlite/undf/src/main/java/org/un/undf/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-tomcat-sqlite/undf/src/main/java/org/un/undf/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-tomcat-sqlite/undf/src/main/java/org/un/undf/controller/AlunoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-tomcat-sqlite/undf/src/main/java/org/un/undf/controller/AlunoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-tomcat-sqlite/undf/src/main/java/org/un/undf/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-tomcat-sqlite/undf/src/main/java/org/un/undf/controller/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-tomcat-sqlite/undf/src/main/java/org/un/undf/model/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-tomcat-sqlite/undf/src/main/java/org/un/undf/model/Aluno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pages/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../pages/login.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2hyGrvolcP4W0NnBf3NIYyczimp" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.undf [clean].executor": "Run",
+    "Maven.undf [install].executor": "Run",
+    "Maven.undf [package].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.UndfApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/luiz/Documents/GitHub/Gerenciador-Disciplinas-UnDF/springboot-mysql-jpa/undf",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="UndfApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="undf" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.uncurricular.undf.UndfApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="205f787a-4782-45b4-b2e4-e1f97f1f3c7c" name="Changes" comment="" />
+      <created>1718559107007</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718559107007</updated>
+      <workItem from="1718559109587" duration="3479000" />
+      <workItem from="1718563160673" duration="47000" />
+      <workItem from="1718564325489" duration="69000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

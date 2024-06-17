@@ -7,8 +7,15 @@ public class Aluno {
 	private String senha;
 	private String curso;
 
+	public Aluno(int id, String nome, String cpf, String senha, String curso) {
+		this.id = id;
+		this.nome = nome;
+		this.cpf = cpf;
+		this.senha = senha;
+		this.curso = curso;
+	}
+
 	public Aluno(String nome, String cpf, String curso) {
-		super();
 		this.nome = nome;
 		this.cpf = cpf;
 		this.curso = curso;

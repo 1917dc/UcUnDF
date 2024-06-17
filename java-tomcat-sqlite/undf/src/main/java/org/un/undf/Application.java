@@ -6,7 +6,7 @@ import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
 
-import org.un.undf.controller.AlunoServlet;
+import org.un.undf.controller.AlunosServlet;
 
 public class Application {
 
@@ -16,7 +16,7 @@ public class Application {
     	tomcat.getConnector();
     	
     	Context ctx = tomcat.addContext("", new File(".").getAbsolutePath());
-    	Tomcat.addServlet(ctx, "AlunoServlet", new AlunoServlet());
+    	Tomcat.addServlet(ctx, "AlunoServlet", new AlunosServlet());
     	ctx.addServletMappingDecoded("/aluno", "AlunoServlet");
     	
     	tomcat.start();
