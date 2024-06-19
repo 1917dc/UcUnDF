@@ -3,7 +3,6 @@ import json
 import streamlit as st
 import requests as req
 from login_page import URL
-from streamlit_card import card
 
 
 # st.set_page_config(
