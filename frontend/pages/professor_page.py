@@ -3,6 +3,7 @@ import json
 import streamlit as st
 import requests as req
 from login_page import URL
+from streamlit_card import card
 
 
 # st.set_page_config(
@@ -30,6 +31,10 @@ def welcome():
     # a biblioteca guli retorna a variável de cpf armazenada
     st.title(('Bem vindo professor :blue[%s]!' %(professor['nome'])), anchor=False)
 
+def turma_professor(turma_id):
+    guli.GuliVariable("turma_id").setValue(turma_id)
+    st.switch_page('pages/professor_turma_page.py')
+
 # função para exibir cards do professor
 
 def cards_professor():
@@ -38,7 +43,7 @@ def cards_professor():
     turmas = {
         "id" : None,
         "nome" : None,
-        "descricao" : None
+        "descricao" : None,
     }
     
     # pegando as turmas do banco de dados para json
@@ -66,14 +71,26 @@ def cards_professor():
         
         # montando e organizando as disciplinas em rows
 
-        for col in st.columns(1) :
-            tile = col.container(height=220)
+        
+        card_turma = card(
+            title='',
+            text=(turma['nome'], turma['descricao']),
+            on_click=lambda: turma_professor(turma['id']),
+            styles={
+                "card": {
+                    "width": "250px",
+                    "height": "150px",
+                    "border-radius": "30px",
+                    "box-shadow": "0 0 0px rgba(0,0,0,0.5)",
+                },
+                "text": {
+                    "font-family": "sans serif",
+                    "font-size" : "15px"
+                }
+            }
+        )
             
-            tile.markdown("### %s" %turma['nome'])
-            tile.markdown(" - Descrição: %s" %turma['descricao'])
-            tile.markdown(" - Carga horária: %s hrs" %turma['cargaHoraria'])
-            tile.button('Entrar', key=turma['id'])
-
+            
 def start():
     welcome()
     st.divider()

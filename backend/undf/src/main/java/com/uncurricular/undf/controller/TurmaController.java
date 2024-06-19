@@ -36,10 +36,8 @@ public class TurmaController {
     }
 
     @GetMapping("/{id}/alunos")
-    public List<Aluno> findAllAlunosTurma(@PathVariable Long id){
-        return turmaAlunoRepository.findByTurmaId(id).stream()
-                .map(TurmaAluno::getAluno)
-                .collect(Collectors.toList());
+    public List<TurmaAluno> findAllAlunosTurma(@PathVariable Long id){
+        return turmaAlunoRepository.findByTurmaId(id);
     }
 
     @GetMapping("/{turma_id}/aluno/{aluno_id}")
