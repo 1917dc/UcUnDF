@@ -6,10 +6,7 @@ import com.uncurricular.undf.model.TurmaAluno;
 import com.uncurricular.undf.repository.AlunoRepository;
 import com.uncurricular.undf.repository.TurmaAlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -41,5 +38,14 @@ public class AlunoController {
         return turmaAlunos.stream()
                 .map(TurmaAluno::getTurma)
                 .collect(Collectors.toList());
+    }
+
+    @PutMapping("/{id}/nota")
+    public Aluno updateNota(@PathVariable Long id, @RequestBody Double nota) {
+        Aluno aluno = repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Aluno não encontrado com id " + id));
+
+        aluno.setNota(nota);
+        return repository.save(aluno);
     }
 }

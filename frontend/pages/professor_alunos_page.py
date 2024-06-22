@@ -53,7 +53,8 @@ def table_alunos():
         'Curso' : alunos_cursos,
         'Nota' : alunos_notas
     })    
-    st.dataframe(df, hide_index= True, width=800)
+    st.data_editor(df, column_config={"alunos_nomes" : "Nomes","alunos_curso" : "Curso","alunos_notas" : "Nota"}, 
+                   disabled=["Nome", "Curso"], hide_index= True, width=900, ) 
 
 
 
