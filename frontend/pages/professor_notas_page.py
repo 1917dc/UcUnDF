@@ -23,14 +23,25 @@ def create_feedback():
 
     option = st.selectbox("Selecione o aluno", options=list(CHOICES.keys()), format_func=format_func)
 
-    titulo_feedback = st.text_area("Título do feedback")
-    corpo_feedback = st.text_area("Corpo do feedback")
+    titulo_feedback = st.text_area("Título do feedback", key="titulo_feedback")
+    corpo_feedback = st.text_area("Corpo do feedback", key="corpo_feedback")
+
+    json = {
+        "turma": {
+            "id": turma['id']
+        },
+        "professor": {
+            "id": turma['professor']['id']
+        },
+        "aluno": {
+            "id": option
+        },
+        "titulo": st.session_state.titulo_feedback,
+        "corpo": st.session_state.corpo_feedback
+    }
 
     if st.button("Enviar"):
-        response = req.post(URL + "/feedbacks/aluno/post/%s/%s/%s" %(turma['id'], turma['professor']['id'], option),
-                            json={"titulo": titulo_feedback,
-                                  "corpo": corpo_feedback},
-                            headers={"Content-Type": "application/json"})
+        response = req.post(URL + "/feedbacks/aluno/post/%s" %option, data = json)
         st.rerun()
 
 def welcome():
@@ -87,12 +98,9 @@ def table_alunos():
     col1, col2 = st.columns(2)
 
     with col1:
-        # Crie um botão para enviar alterações
         if st.button('Enviar Alterações'):
-            # Encontre as diferenças entre os dataframes original e editado
             diff = pd.concat([original_df, edited_df]).drop_duplicates(keep=False)
 
-            # Imprima as alterações
             counter = 0
             for index, row in diff.iterrows():
                 counter += 1

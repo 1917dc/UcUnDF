@@ -49,4 +49,14 @@ public class AlunoController {
         turmaAlunoRepository.save(turmaAluno);
         return turmaAluno;
     }
+
+    @GetMapping("/aluno")
+    public Aluno findAlunoByCpf(String cpf){
+        return alunoRepository.findAlunoByCpf(cpf);
+    }
+
+    @GetMapping("/turma/{aluno_id}")
+    public Optional<TurmaAluno> findAlunoInTurmaById(@PathVariable Long aluno_id){
+        return turmaAlunoRepository.findById(aluno_id);
+    }
 }

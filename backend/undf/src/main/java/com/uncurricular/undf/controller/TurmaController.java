@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/turmas")
@@ -51,6 +50,11 @@ public class TurmaController {
             }
         }
         return aluno;
+    }
+
+    @GetMapping("/aluno/{aluno_id}")
+    public List<TurmaAluno> findTurmasByAlunoId(@PathVariable Long aluno_id){
+        return turmaAlunoRepository.findTurmaAlunoByAlunoId(aluno_id);
     }
 
 }
