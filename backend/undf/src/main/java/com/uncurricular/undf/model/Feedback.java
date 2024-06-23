@@ -25,6 +25,14 @@ public class Feedback {
     public Feedback() {
     }
 
+    public Feedback(Turma turma, Professor professor, Aluno aluno, String titulo, String corpo) {
+        this.turma = turma;
+        this.professor = professor;
+        this.aluno = aluno;
+        this.titulo = titulo;
+        this.corpo = corpo;
+    }
+
     public Long getId() {
         return id;
     }

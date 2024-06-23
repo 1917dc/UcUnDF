@@ -1,5 +1,6 @@
 package com.uncurricular.undf.controller;
 
+import com.uncurricular.undf.exception.ResourceNotFoundException;
 import com.uncurricular.undf.model.Aluno;
 import com.uncurricular.undf.model.Turma;
 import com.uncurricular.undf.model.TurmaAluno;
@@ -17,19 +18,19 @@ import java.util.stream.Collectors;
 public class AlunoController {
 
     @Autowired
-    private AlunoRepository repository;
+    private AlunoRepository alunoRepository;
 
     @Autowired
     private TurmaAlunoRepository turmaAlunoRepository;
 
     @GetMapping
     public List<Aluno> findAll(){
-        return repository.findAll();
+        return alunoRepository.findAll();
     }
 
     @GetMapping("/{id}")
     public Optional<Aluno> findById(@PathVariable Long id){
-        return repository.findById(id);
+        return alunoRepository.findById(id);
     }
 
     @GetMapping("/{id}/turmas")
@@ -41,11 +42,11 @@ public class AlunoController {
     }
 
     @PutMapping("/{id}/nota")
-    public Aluno updateNota(@PathVariable Long id, @RequestBody Double nota) {
-        Aluno aluno = repository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Aluno não encontrado com id " + id));
-
-        aluno.setNota(nota);
-        return repository.save(aluno);
+    public TurmaAluno updateNotaByAlunoId(@PathVariable Long id, @RequestBody Float nota) {
+        TurmaAluno turmaAluno = turmaAlunoRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("TurmaAluno não encontrado com id " + id));
+        turmaAluno.setNota(nota);
+        turmaAlunoRepository.save(turmaAluno);
+        return turmaAluno;
     }
 }

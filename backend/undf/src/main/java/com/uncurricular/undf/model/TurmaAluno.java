@@ -16,7 +16,7 @@ public class TurmaAluno {
     @OneToOne
     private Aluno aluno;
 
-    private String nota;
+    private Float nota;
 
     public TurmaAluno() {
     }
@@ -45,11 +45,11 @@ public class TurmaAluno {
         this.aluno = aluno;
     }
 
-    public String getNota() {
+    public Float getNota() {
         return nota;
     }
 
-    public void setNota(String nota) {
+    public void setNota(Float nota) {
         this.nota = nota;
     }
 }

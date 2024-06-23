@@ -3,6 +3,7 @@ package com.uncurricular.undf.controller;
 
 import com.uncurricular.undf.model.Laudo;
 import com.uncurricular.undf.repository.LaudoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,7 @@ import java.util.Optional;
 @RequestMapping("/laudos")
 public class LaudoController {
 
+    @Autowired
     private LaudoRepository laudoRepository;
 
     @GetMapping

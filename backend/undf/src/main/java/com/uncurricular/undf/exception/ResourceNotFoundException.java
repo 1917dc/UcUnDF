@@ -1,4 +1,4 @@
-package com.uncurricular.undf.controller;
+package com.uncurricular.undf.exception;
 
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String s) {
