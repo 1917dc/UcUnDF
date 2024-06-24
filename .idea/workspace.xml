@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfe870bf-f989-4f63-bb9b-f2155119ef9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/pages/aluno_turma_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/undf/src/main/java/com/uncurricular/undf/controller/AlunoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/undf/src/main/java/com/uncurricular/undf/controller/AlunoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/undf/src/main/java/com/uncurricular/undf/controller/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/undf/src/main/java/com/uncurricular/undf/controller/FeedbackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/undf/src/main/java/com/uncurricular/undf/controller/TurmaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/undf/src/main/java/com/uncurricular/undf/controller/TurmaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/undf/src/main/java/com/uncurricular/undf/repository/AlunoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/undf/src/main/java/com/uncurricular/undf/repository/AlunoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/aluno_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/aluno_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/professor_notas_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/professor_notas_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +65,7 @@
       <workItem from="1719091195739" duration="74000" />
       <workItem from="1719091283302" duration="13555000" />
       <workItem from="1719148351809" duration="9094000" />
+      <workItem from="1719262235615" duration="1211000" />
     </task>
     <servers />
   </component>
