@@ -60,27 +60,18 @@ def table_alunos():
     for aluno in turma_alunos_json:
 
         # definindo quais informações vou pegar do json
-        detalhes_aluno = {'id': None, 'aluno_id' : None, 'nota' : None, 'feedback' : None, 'curso' : None}
+        detalhes_aluno = {'id': None, 'aluno_id' : None, 'nota' : None, 'curso' : None}
 
-        # pegando feedback respectivamente
-        feedback = {'id' : None, 'aluno' : None,'descricao' : None, 'turma' : None}
-
-        if req.get(URL + '/feedbacks/%s' %aluno['aluno']['id']).json() == None:
-            feedback['descricao'] = 'Sem feedback'
-        else:
-            feedback = req.get(URL + '/feedbacks/aluno/%s' %aluno['aluno']['id']).json()
 
         detalhes_aluno['id'] = aluno['id']
         detalhes_aluno['aluno_nome'] = aluno['aluno']['nome']
         detalhes_aluno['curso'] = aluno['aluno']['curso']
         detalhes_aluno['nota'] = aluno['nota']
-        detalhes_aluno['feedback'] = feedback['corpo']
 
         alunos_ids.append(detalhes_aluno['id'])
         alunos_nomes.append(detalhes_aluno['aluno_nome'])
         alunos_notas.append(detalhes_aluno['nota'])
         alunos_cursos.append(detalhes_aluno['curso'])
-        alunos_feedbacks.append(detalhes_aluno['feedback'])
 
 
 
@@ -88,12 +79,11 @@ def table_alunos():
         'Indice' : alunos_ids,
         'Nome' : alunos_nomes,
         'Curso' : alunos_cursos,
-        'Feedback' : alunos_feedbacks,
         'Nota' : alunos_notas
     })
     original_df = df.copy()
     # Exiba o editor de dataframe
-    edited_df = st.data_editor(df, disabled=["Feedback","Nome", "Curso", "Laudo"], hide_index= True, width=900, key= 'df_copy', column_config={"Indice" : None})
+    edited_df = st.data_editor(df, disabled=["Nome", "Curso", "Laudo"], hide_index= True, width=900, key= 'df_copy', column_config={"Indice" : None})
 
     col1, col2 = st.columns(2)
 

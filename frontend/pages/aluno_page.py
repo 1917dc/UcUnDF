@@ -82,11 +82,15 @@ def cards_aluno():
                     "width": "250px",
                     "height": "150px",
                     "border-radius": "30px",
-                    "box-shadow": "0 0 0px rgba(0,0,0,0.5)",
+                    "box-shadow": "0 0 0px rgba(0,0,0,0)",
                 },
                 "text": {
                     "font-family": "sans serif",
-                    "font-size" : "15px"
+                    "font-size" : "30px",
+                    "color" : "#2661bf"
+                },
+                "filter": {
+                    "background-color": "rgba(0, 0, 0, 0)"
                 }
             }
         )
