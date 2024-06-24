@@ -39,11 +39,15 @@ def card_turma():
                     "width": "250px",
                     "height": "150px",
                     "border-radius": "30px",
-                    "box-shadow": "0 0 0px rgba(0,0,0,0.5)",
+                    "box-shadow": "0 0 0px rgba(0,0,0,0)",
                 },
-                "text": {
+                "title": {
                     "font-family": "sans serif",
-                    "font-size" : "15px"
+                    "font-size" : "30px",
+                    "color" : "#2661bf"
+                },
+                "filter": {
+                    "background-color": "rgba(0, 0, 0, 0)"
                 }
             }
         )
@@ -57,23 +61,27 @@ def card_turma():
                     "width": "250px",
                     "height": "150px",
                     "border-radius": "30px",
-                    "box-shadow": "0 0 0px rgba(0,0,0,0.5)",
+                    "box-shadow": "0 0 0px rgba(0,0,0,0)",
                 },
-                "text": {
+                "title": {
                     "font-family": "sans serif",
-                    "font-size" : "15px"
+                    "font-size" : "30px",
+                    "color" : "#2661bf"
+                },
+                "filter": {
+                    "background-color": "rgba(0, 0, 0, 0)"
                 }
             }
         )
         
 # função que mostra a mensagem de boas vindas
 def welcome():
-    st.markdown('## Turma de :blue-background[%s]' %turma['nome'])
+    st.markdown('## Turma de :blue[%s]' %turma['nome'])
     col1, col2 = st.columns(2)
     with col1:
         st.markdown('- **Professor: :blue[%s]**' %turma['professor']['nome'])
     with col2:
-        st.markdown('- **Sala: %i**' %turma['sala']['numero'])
+        st.markdown('- **Sala: :blue[%i]**' %turma['sala']['numero'])
     
 # função que começa a aplicação
 def start():

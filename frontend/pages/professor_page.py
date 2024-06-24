@@ -73,19 +73,28 @@ def cards_professor():
 
         
         card_turma = card(
-            title='',
-            text=(turma['nome'], turma['descricao']),
+            title=turma['nome'],
+            text=(turma['descricao']),
             on_click=lambda: turma_professor(turma['id']),
             styles={
                 "card": {
                     "width": "250px",
                     "height": "150px",
                     "border-radius": "30px",
-                    "box-shadow": "0 0 0px rgba(0,0,0,0.5)",
+                    "box-shadow": "0 0 0px rgba(0,0,0,0)",
                 },
                 "text": {
                     "font-family": "sans serif",
-                    "font-size" : "15px"
+                    "font-size" : "15px",
+                    "color" : "#2661bf"
+                },
+                "title": {
+                    "font-family": "sans serif",
+                    "font-size" : "30px",
+                    "color" : "#2661bf"
+                },
+                "filter": {
+                    "background-color": "rgba(0, 0, 0, 0)"
                 }
             }
         )
