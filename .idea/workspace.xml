@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfe870bf-f989-4f63-bb9b-f2155119ef9f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/pages/professor_analise_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/undf/src/main/java/com/uncurricular/undf/controller/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/undf/src/main/java/com/uncurricular/undf/controller/FeedbackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pages/aluno_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/aluno_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pages/aluno_turma_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/aluno_turma_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pages/professor_alunos_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/professor_alunos_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pages/professor_notas_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/professor_notas_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pages/professor_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/professor_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pages/professor_turma_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/professor_turma_page.py" afterDir="false" />
     </list>
+    <list id="da741548-f221-4b9f-b49f-9e95475d006b" name="Changes by loli" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +23,30 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/frontend/pages/professor_page.py">
+      <ranges>
+        <range start1="7" end1="7" start2="7" end2="8" changelist="da741548-f221-4b9f-b49f-9e95475d006b" />
+        <range start1="66" end1="67" start2="67" end2="68" changelist="bfe870bf-f989-4f63-bb9b-f2155119ef9f" />
+        <range start1="68" end1="69" start2="69" end2="70" changelist="bfe870bf-f989-4f63-bb9b-f2155119ef9f" />
+        <range start1="70" end1="101" start2="71" end2="102" changelist="bfe870bf-f989-4f63-bb9b-f2155119ef9f" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/frontend/pages/professor_alunos_page.py">
+      <ranges>
+        <range start1="8" end1="9" start2="8" end2="9" changelist="da741548-f221-4b9f-b49f-9e95475d006b" />
+        <range start1="10" end1="11" start2="10" end2="11" changelist="da741548-f221-4b9f-b49f-9e95475d006b" />
+        <range start1="31" end1="32" start2="31" end2="32" changelist="bfe870bf-f989-4f63-bb9b-f2155119ef9f" />
+        <range start1="44" end1="45" start2="44" end2="44" changelist="bfe870bf-f989-4f63-bb9b-f2155119ef9f" />
+        <range start1="49" end1="50" start2="48" end2="48" changelist="bfe870bf-f989-4f63-bb9b-f2155119ef9f" />
+        <range start1="60" end1="61" start2="58" end2="58" changelist="bfe870bf-f989-4f63-bb9b-f2155119ef9f" />
+        <range start1="62" end1="85" start2="59" end2="60" changelist="bfe870bf-f989-4f63-bb9b-f2155119ef9f" />
+      </ranges>
+    </file>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -28,6 +61,8 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python.aluno_page.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.professor_analise_page.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -41,6 +76,36 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="aluno_page" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Gerenciador-Disciplinas-UnDF" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/frontend/pages" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/frontend/pages/aluno_page.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.aluno_page" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -65,11 +130,16 @@
       <workItem from="1719091195739" duration="74000" />
       <workItem from="1719091283302" duration="13555000" />
       <workItem from="1719148351809" duration="9094000" />
-      <workItem from="1719262235615" duration="1211000" />
+      <workItem from="1719262235615" duration="14663000" />
+      <workItem from="1719282664558" duration="2000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Gerenciador_Disciplinas_UnDF$professor_analise_page.coverage" NAME="professor_analise_page Coverage Results" MODIFIED="1719272812474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/frontend/pages" />
+    <SUITE FILE_PATH="coverage/Gerenciador_Disciplinas_UnDF$aluno_page.coverage" NAME="aluno_page Coverage Results" MODIFIED="1719280113809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/frontend/pages" />
   </component>
 </project>

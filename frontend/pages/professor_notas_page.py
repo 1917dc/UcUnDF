@@ -102,9 +102,9 @@ def table_alunos():
                     response = req.put(url, headers=headers, json=float(data_json))
                     if response.status_code != 200:
                         print(f"Error: Failed to update nota for aluno_id {row['Indice']}. Status code: {response.status_code}")
-    with col2:
-        if st.button('Gerar feedback'):
-            create_feedback()
+    #with col2:
+    #    if st.button('Gerar feedback'):
+     #       create_feedback()
 
 def start():
     welcome()

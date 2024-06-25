@@ -24,10 +24,14 @@ def turma_notas(turma_id):
     guli.GuliVariable("turma_id").setValue(turma_id)
     st.switch_page('pages/professor_notas_page.py')
 
+def turma_analise(turma_id):
+    guli.GuliVariable("turma_id").setValue(turma_id)
+    st.switch_page('pages/professor_analise_page.py')
+
 # função que mostra os cards de cada opção
 def card_turma():
-    col1, col2 = st.columns(2)
-    
+    col1, col2, col3 = st.columns(3)
+
     # colunas que organizam os cards 
     with col1:
         card_alunos = card(
@@ -36,18 +40,26 @@ def card_turma():
             on_click=lambda: turma_alunos(turma['id']),
             styles={
                 "card": {
-                    "width": "250px",
-                    "height": "150px",
-                    "border-radius": "30px",
+                    "width": "220px",
+                    "height": "90px",
+                    "border-radius": "25px",
                     "box-shadow": "0 0 0px rgba(0,0,0,0)",
+                    "margin": "0px",
+                    "padding": "35%",
+                    "border": "4px solid rgb(0, 104, 201)",
+                },
+                "text": {
+                    "font-family": "sans serif",
+                    "font-size" : "20px",
+                    "color" : "#rgb(38, 39, 48)"
                 },
                 "title": {
                     "font-family": "sans serif",
-                    "font-size" : "30px",
+                    "font-size" : "27px",
                     "color" : "#2661bf"
                 },
                 "filter": {
-                    "background-color": "rgba(0, 0, 0, 0)"
+                    "background-color": "#fafafa",
                 }
             }
         )
@@ -58,18 +70,56 @@ def card_turma():
             on_click=lambda: turma_notas(turma['id']),
             styles={
                 "card": {
-                    "width": "250px",
-                    "height": "150px",
-                    "border-radius": "30px",
+                    "width": "220px",
+                    "height": "90px",
+                    "border-radius": "25px",
                     "box-shadow": "0 0 0px rgba(0,0,0,0)",
+                    "margin": "0px",
+                    "padding": "35%",
+                    "border": "4px solid rgb(0, 104, 201)",
+                },
+                "text": {
+                    "font-family": "sans serif",
+                    "font-size" : "20px",
+                    "color" : "#rgb(38, 39, 48)"
                 },
                 "title": {
                     "font-family": "sans serif",
-                    "font-size" : "30px",
+                    "font-size" : "27px",
                     "color" : "#2661bf"
                 },
                 "filter": {
-                    "background-color": "rgba(0, 0, 0, 0)"
+                    "background-color": "#fafafa",
+                }
+            }
+        )
+    with col3:
+        card_shiny = card(
+            title='Desempenho',
+            text='',
+            on_click=lambda: turma_analise(turma['id']),
+            styles={
+                "card": {
+                    "width": "220px",
+                    "height": "90px",
+                    "border-radius": "25px",
+                    "box-shadow": "0 0 0px rgba(0,0,0,0)",
+                    "margin": "0px",
+                    "padding": "35%",
+                    "border": "4px solid rgb(0, 104, 201)",
+                },
+                "text": {
+                    "font-family": "sans serif",
+                    "font-size" : "20px",
+                    "color" : "#rgb(38, 39, 48)"
+                },
+                "title": {
+                    "font-family": "sans serif",
+                    "font-size" : "27px",
+                    "color" : "#2661bf"
+                },
+                "filter": {
+                    "background-color": "#fafafa",
                 }
             }
         )

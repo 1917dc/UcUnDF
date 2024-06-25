@@ -68,32 +68,39 @@ def cards_aluno():
 
     # for que exibe as disciplinas
 
+    col1, col2 = st.columns(2)
+
     for turma_aluno in turmas:
-
-        # montando e organizando as disciplinas em rows
-
-
-        card_turma = card(
-            title='',
-            text=(turma_aluno['turma']['nome']),
-            on_click=lambda: aluno_turma(turma_aluno['id']),
-            styles={
-                "card": {
-                    "width": "250px",
-                    "height": "150px",
-                    "border-radius": "30px",
-                    "box-shadow": "0 0 0px rgba(0,0,0,0)",
-                },
-                "text": {
-                    "font-family": "sans serif",
-                    "font-size" : "30px",
-                    "color" : "#2661bf"
-                },
-                "filter": {
-                    "background-color": "rgba(0, 0, 0, 0)"
+        with col1 if turmas.index(turma_aluno) % 2 == 0 else col2:
+            card_turma = card(
+                title=turma_aluno['turma']['nome'],
+                text=(turma_aluno['turma']['disciplina']['descricao']),
+                on_click=lambda: aluno_turma(turma_aluno['id']),
+                styles={
+                    "card": {
+                        "width": "320px",
+                        "height": "90px",
+                        "border-radius": "25px",
+                        "box-shadow": "0 0 0px rgba(0,0,0,0)",
+                        "margin": "0px",
+                        "padding": "35%",
+                        "border": "4px solid rgb(0, 104, 201)",
+                    },
+                    "text": {
+                        "font-family": "sans serif",
+                        "font-size" : "20px",
+                        "color" : "#rgb(38, 39, 48)"
+                    },
+                    "title": {
+                        "font-family": "sans serif",
+                        "font-size" : "27px",
+                        "color" : "#2661bf"
+                    },
+                    "filter": {
+                        "background-color": "#fafafa",
+                    }
                 }
-            }
-        )
+            )
 
 
 def start():

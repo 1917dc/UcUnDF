@@ -6,6 +6,7 @@ from login_page import URL
 from streamlit_card import card
 
 
+
 # st.set_page_config(
 #     page_title = "Professor - UcUnDF",
 #     page_icon = "📚"
@@ -64,41 +65,41 @@ def cards_professor():
         detalhes_turma['cargaHoraria'] = turma['disciplina']['cargaHoraria']
                 
         turmas.append(detalhes_turma)
-    
-    # for que exibe as disciplinas
-    
-    for turma in turmas:
-        
-        # montando e organizando as disciplinas em rows
 
-        
-        card_turma = card(
-            title=turma['nome'],
-            text=(turma['descricao']),
-            on_click=lambda: turma_professor(turma['id']),
-            styles={
-                "card": {
-                    "width": "250px",
-                    "height": "150px",
-                    "border-radius": "30px",
-                    "box-shadow": "0 0 0px rgba(0,0,0,0)",
-                },
-                "text": {
-                    "font-family": "sans serif",
-                    "font-size" : "15px",
-                    "color" : "#2661bf"
-                },
-                "title": {
-                    "font-family": "sans serif",
-                    "font-size" : "30px",
-                    "color" : "#2661bf"
-                },
-                "filter": {
-                    "background-color": "rgba(0, 0, 0, 0)"
+    # for que exibe as disciplinas
+    col1, col2 = st.columns(2)
+    for turma in turmas:
+        with col1 if turmas.index(turma) % 2 == 0 else col2:
+            card_turma = card(
+                title=turma['nome'],
+                text=(turma['descricao']),
+                on_click=lambda: turma_professor(turma['id']),
+                styles={
+                    "card": {
+                        "width": "320px",
+                        "height": "90px",
+                        "border-radius": "25px",
+                        "box-shadow": "0 0 0px rgba(0,0,0,0)",
+                        "margin": "0px",
+                        "padding": "35%",
+                        "border": "4px solid rgb(0, 104, 201)",
+                    },
+                    "text": {
+                        "font-family": "sans serif",
+                        "font-size" : "20px",
+                        "color" : "#rgb(38, 39, 48)"
+                    },
+                    "title": {
+                        "font-family": "sans serif",
+                        "font-size" : "27px",
+                        "color" : "#2661bf"
+                    },
+                    "filter": {
+                        "background-color": "#fafafa",
+                    }
                 }
-            }
-        )
-            
+            )
+
             
 def start():
     welcome()
