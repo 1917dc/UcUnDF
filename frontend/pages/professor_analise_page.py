@@ -30,3 +30,5 @@ fig1 = px.bar(df, x='Aluno', y='Nota', title='Notas dos alunos',
               range_y=[0, 10])
 st.markdown('### Média da turma: %.2f' % media)
 st.plotly_chart(fig1)
+
+st.write('teste')
