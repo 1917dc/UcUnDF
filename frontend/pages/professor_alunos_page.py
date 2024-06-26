@@ -49,10 +49,8 @@ def table_alunos():
         alunos_cursos.append(detalhes_aluno['curso'])
         alunos_laudos.append(detalhes_aluno['laudo'])
 
-
-
     df = pd.DataFrame({
-        'Indice' : alunos_ids,
+        #'Indice' : alunos_ids,
         'Nome' : alunos_nomes,
         'Curso' : alunos_cursos,
         'Laudo' : alunos_laudos,

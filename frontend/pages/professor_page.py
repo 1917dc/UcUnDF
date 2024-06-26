@@ -30,7 +30,7 @@ professor = (req.get(URL + '/professores/professor', params = {"cpf" : cpf})).js
 def welcome():
     
     # a biblioteca guli retorna a variável de cpf armazenada
-    st.title(('Bem vindo professor :blue[%s]!' %(professor['nome'])), anchor=False)
+    st.title(('Bem-vindo(a), Professor(a) :blue[%s]!' %(professor['nome'])), anchor=False)
 
 def turma_professor(turma_id):
     guli.GuliVariable("turma_id").setValue(turma_id)
@@ -85,12 +85,12 @@ def cards_professor():
                         "border": "4px solid rgb(0, 104, 201)",
                     },
                     "text": {
-                        "font-family": "sans serif",
+                        "font-family": "Arial, sans-serif",
                         "font-size" : "20px",
                         "color" : "#rgb(38, 39, 48)"
                     },
                     "title": {
-                        "font-family": "sans serif",
+                        "font-family": "Arial, sans-serif",
                         "font-size" : "27px",
                         "color" : "#2661bf"
                     },

@@ -49,13 +49,13 @@ def card_turma():
                     "border": "4px solid rgb(0, 104, 201)",
                 },
                 "text": {
-                    "font-family": "sans serif",
+                    "font-family": "Arial, sans-serif",
                     "font-size" : "20px",
                     "color" : "#rgb(38, 39, 48)"
                 },
                 "title": {
-                    "font-family": "sans serif",
-                    "font-size" : "27px",
+                    "font-family": "Arial, sans-serif",
+                    "font-size" : "22px",
                     "color" : "#2661bf"
                 },
                 "filter": {
@@ -79,13 +79,13 @@ def card_turma():
                     "border": "4px solid rgb(0, 104, 201)",
                 },
                 "text": {
-                    "font-family": "sans serif",
+                    "font-family": "Arial, sans-serif",
                     "font-size" : "20px",
                     "color" : "#rgb(38, 39, 48)"
                 },
                 "title": {
-                    "font-family": "sans serif",
-                    "font-size" : "27px",
+                    "font-family": "Arial, sans-serif",
+                    "font-size" : "22px",
                     "color" : "#2661bf"
                 },
                 "filter": {
@@ -109,13 +109,13 @@ def card_turma():
                     "border": "4px solid rgb(0, 104, 201)",
                 },
                 "text": {
-                    "font-family": "sans serif",
+                    "font-family": "Arial, sans-serif",
                     "font-size" : "20px",
                     "color" : "#rgb(38, 39, 48)"
                 },
                 "title": {
-                    "font-family": "sans serif",
-                    "font-size" : "27px",
+                    "font-family": "Arial, sans-serif",
+                    "font-size" : "22px",
                     "color" : "#2661bf"
                 },
                 "filter": {

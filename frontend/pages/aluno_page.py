@@ -30,7 +30,7 @@ aluno = (req.get(URL + '/alunos/aluno', params = {"cpf" : cpf})).json()
 def welcome():
 
     # a biblioteca guli retorna a variável de cpf armazenada
-    st.title(('Bem vindo aluno :blue[%s]!' %(aluno['nome'])), anchor=False)
+    st.title(('Bem-vindo(a), :blue[%s]!' %(aluno['nome'])), anchor=False)
 
 def aluno_turma(turma_aluno_id):
     guli.GuliVariable("turma_aluno_id").setValue(turma_aluno_id)
@@ -87,12 +87,12 @@ def cards_aluno():
                         "border": "4px solid rgb(0, 104, 201)",
                     },
                     "text": {
-                        "font-family": "sans serif",
+                        "font-family": "Arial, sans-serif",
                         "font-size" : "20px",
                         "color" : "#rgb(38, 39, 48)"
                     },
                     "title": {
-                        "font-family": "sans serif",
+                        "font-family": "Arial, sans-serif",
                         "font-size" : "27px",
                         "color" : "#2661bf"
                     },
