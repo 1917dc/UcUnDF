@@ -5,6 +5,24 @@ import json
 import guli
 from streamlit_card import card
 
+st.markdown(
+    """
+    <style>
+    .footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #ffffff;
+        border-top: 2px solid #2661bf;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 @st.experimental_dialog("Crie o feedback")
 def create_feedback():
 
@@ -39,13 +57,22 @@ def welcome():
     st.markdown('## Unidade Curricular: :blue[%s]' %aluno_json['turma']['nome'])
 
 def container_aluno():
-    container_resultados = st.container(height=225, border=True)
+    container_resultados = st.container(height=240, border=True)
 
-    container_resultados.markdown('**:blue[Nome]:** ' + aluno_json['aluno']['nome'])
-    container_resultados.markdown('**:blue[Curso]:** ' + aluno_json['aluno']['curso'])
-    container_resultados.markdown('**:blue[Professor]:** ' + aluno_json['turma']['professor']['nome'])
-    container_resultados.markdown('**:blue[Sala de Aula]:** ' + str(aluno_json['turma']['sala']['numero']))
-    container_resultados.markdown('**:blue[Nota final]:** ' + str(aluno_json['nota']))
+    container_resultados.markdown(
+        '**<span style="font-size: 18px;">:blue[Nome]:</span>** ' + aluno_json['aluno']['nome'], unsafe_allow_html=True)
+    container_resultados.markdown(
+        '**<span style="font-size: 18px;">:blue[Curso]:</span>** ' + aluno_json['aluno']['curso'],
+        unsafe_allow_html=True)
+    container_resultados.markdown(
+        '**<span style="font-size: 18px;">:blue[Professor]:</span>** ' + aluno_json['turma']['professor']['nome'],
+        unsafe_allow_html=True)
+    container_resultados.markdown(
+        '**<span style="font-size: 18px;">:blue[Sala de Aula]:</span>** ' + str(aluno_json['turma']['sala']['numero']),
+        unsafe_allow_html=True)
+    container_resultados.markdown(
+        '**<span style="font-size: 18px;">:blue[Nota final]:</span>** ' + str(aluno_json['nota']),
+        unsafe_allow_html=True)
 
     # container_feedback = st.container(height=300, border=True)
     # container_feedback.markdown('### **:blue[Feedback]:** ')
@@ -64,3 +91,13 @@ def start():
     container_aluno()
 
 start()
+
+st.markdown(
+    """
+    <div class="footer">
+        <p><span style="font-size: 14px;">Desenvolvido pela Equipe Epsilon - Junho de 2024 • Universidade do Distrito Federal</span></p>
+        <p><span style="font-size: 12px;"><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></span></p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)

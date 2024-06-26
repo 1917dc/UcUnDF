@@ -5,6 +5,24 @@ import json
 import guli
 import pandas as pd
 
+st.markdown(
+    """
+    <style>
+    .footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #ffffff;
+        border-top: 2px solid #2661bf;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 turma = {
     'id' : None,
     'professor': None,
@@ -112,3 +130,13 @@ def start():
     table_alunos()
 
 start()
+
+st.markdown(
+    """
+    <div class="footer">
+        <p><span style="font-size: 14px;">Desenvolvido pela Equipe Epsilon - Junho de 2024 • Universidade do Distrito Federal</span></p>
+        <p><span style="font-size: 12px;"><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></span></p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
