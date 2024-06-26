@@ -102,7 +102,6 @@ def cards_aluno():
                 }
             )
 
-
 def start():
     welcome()
     st.divider()

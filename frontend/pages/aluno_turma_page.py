@@ -39,11 +39,12 @@ def welcome():
     st.markdown('## Unidade Curricular: :blue[%s]' %aluno_json['turma']['nome'])
 
 def container_aluno():
-    container_resultados = st.container(height=200, border=True)
+    container_resultados = st.container(height=225, border=True)
 
     container_resultados.markdown('**:blue[Nome]:** ' + aluno_json['aluno']['nome'])
     container_resultados.markdown('**:blue[Curso]:** ' + aluno_json['aluno']['curso'])
     container_resultados.markdown('**:blue[Professor]:** ' + aluno_json['turma']['professor']['nome'])
+    container_resultados.markdown('**:blue[Sala de Aula]:** ' + str(aluno_json['turma']['sala']['numero']))
     container_resultados.markdown('**:blue[Nota final]:** ' + str(aluno_json['nota']))
 
     # container_feedback = st.container(height=300, border=True)
