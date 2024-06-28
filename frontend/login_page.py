@@ -61,9 +61,9 @@ def login():
         st.form_submit_button("Entrar", on_click = verify(acesso, cpf, senha))
         
 def start():
-    col1, col2, col3 = st.columns([1, 2, 1])  # Colunas vazias para centralizar
+    col1, col2, col3 = st.columns([2, 1, 2])  # Colunas vazias para centralizar
     with col2:
-        st.image('https://www.universidade.df.gov.br/wp-conteudo//uploads/2023/06/Untitled-2-1.png', width=300)
+        st.image('https://cdn.tecconcursos.com.br/figuras/2d70cd59-d405-4862-bb1f-370c40074548', width=150)
     st.title("Sistema de Unidades Curriculares   :blue[UnDF] ", anchor=False)
     login()
     

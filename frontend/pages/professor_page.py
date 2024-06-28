@@ -2,27 +2,53 @@ import guli
 import json
 import streamlit as st
 import requests as req
+from PIL._imaging import font
+
 from login_page import URL
 from streamlit_card import card
 
 st.set_page_config(
     page_title="Professor - UcUnDF",
     page_icon="📚",
+    layout="wide"
 )
 
 st.markdown(
     """
     <style>
+    .header {
+        display: flex;
+        align-items: center;
+        background-color: #2694bf;
+        padding: 10px 20px;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        margin-bottom: 40px;
+        border-radius: 10px;
+    }
+    .header img {
+        height: 40px;
+        cursor: pointer;
+        margin: 15px;
+    }
+    .header-title {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0;
+    }
+    
     .footer {
         text-align: center;
         padding: 10px;
         background-color: #ffffff;
         border-top: 2px solid #2661bf;
-        position: fixed;
         width: 100%;
         bottom: 0;
         left: 0;
     }
+
     </style>
     """,
     unsafe_allow_html=True
@@ -40,6 +66,15 @@ __professor = {
 }
 professor = (req.get(URL + '/professores/professor', params = {"cpf" : cpf})).json()
 
+st.markdown(
+    f"""
+    <div class="header">
+        <a href="/"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhR3jbnt6fzzQ7vy7rvBk7Xsz7-WkA0G73EctYBD5kYTC6mdBho5mJaejWEgMvCjjnvHEir_Ydr13pHP2DC0Y9XyeFfK3kHcPl_sMIzCSEQE70ZCfZIWg8uZNeLKquhuv7yq7q-B-V3ViVrQwLQaiccoju5g-el6A439S4_Ym8zApZtx8OCdO6kuOHm/s432/undf.png" alt="Logo"></a>
+        <h1 class="header-title" style="font-size: 42px;">Gerenciador de Disciplinas</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # mensagem de boas vindas
 
@@ -80,17 +115,18 @@ def cards_professor():
         turmas.append(detalhes_turma)
 
     # for que exibe as disciplinas
-    col1, col2 = st.columns(2)
-    for turma in turmas:
-        with col1 if turmas.index(turma) % 2 == 0 else col2:
+    cols = st.columns(3)
+
+    for i, turma in enumerate(turmas):
+        with cols[i % 3]:
             card_turma = card(
                 title=turma['nome'],
-                text=(turma['descricao']),
-                on_click=lambda: turma_professor(turma['id']),
+                text=turma['descricao'],
+                on_click=lambda turma_id=turma['id']: turma_professor(turma_id),
                 styles={
                     "card": {
                         "width": "320px",
-                        "height": "120px",
+                        "height": "140px",
                         "border-radius": "15px",
                         "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.2)",
                         "margin": "10px",
@@ -120,14 +156,14 @@ def start():
     st.divider()
     cards_professor()
 
-start()
+    st.markdown(
+        """
+        <div class="footer">
+            <p style="margin: 0px;"><span style="font-size: 14px;">Junho de 2024 • Universidade do Distrito Federal</span></p>
+            <p><span style="font-size: 12px;"><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></span></p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
-st.markdown(
-    """
-    <div class="footer">
-        <p><span style="font-size: 14px;">Desenvolvido pela Equipe Epsilon - Junho de 2024 • Universidade do Distrito Federal</span></p>
-        <p><span style="font-size: 12px;"><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></span></p>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+start()

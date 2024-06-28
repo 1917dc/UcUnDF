@@ -4,6 +4,12 @@ import requests as req
 import guli
 from streamlit_card import card
 
+st.set_page_config(
+    page_title="Página da Turma - UcUnDF",
+    page_icon="📚",
+    layout="centered"
+)
+
 st.markdown(
     """
     <style>
@@ -162,17 +168,16 @@ def start():
     welcome()
     st.divider()
     card_turma()
-    
-    
+
+    st.markdown(
+        """
+        <div class="footer">
+            <p style="margin: 0px;"><span style="font-size: 14px;">Junho de 2024 • Universidade do Distrito Federal</span></p>
+            <p><span style="font-size: 12px;"><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></span></p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
     
 start()
 
-st.markdown(
-    """
-    <div class="footer">
-        <p><span style="font-size: 14px;">Desenvolvido pela Equipe Epsilon - Junho de 2024 • Universidade do Distrito Federal</span></p>
-        <p><span style="font-size: 12px;"><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></span></p>
-    </div>
-    """,
-    unsafe_allow_html=True
-)

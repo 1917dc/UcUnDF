@@ -5,6 +5,11 @@ import json
 import guli
 import pandas as pd
 
+st.set_page_config(
+    page_title="Notas Finais - UcUnDF",
+    page_icon="📚"
+)
+
 st.markdown(
     """
     <style>
@@ -63,7 +68,7 @@ def create_feedback():
         st.rerun()
 
 def welcome():
-    st.markdown('## Notas de :blue[%s]' %turma['nome'])
+    st.markdown('## Notas Finais de :blue[%s]' %turma['nome'])
 
 def table_alunos():
     turma_alunos_json = (req.get(URL + "/turmas/%s/alunos" %turma_id)).json()
@@ -129,14 +134,14 @@ def start():
     st.divider()
     table_alunos()
 
-start()
+    st.markdown(
+        """
+        <div class="footer">
+            <p style="margin: 0px;"><span style="font-size: 14px;">Junho de 2024 • Universidade do Distrito Federal</span></p>
+            <p><span style="font-size: 12px;"><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></span></p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
-st.markdown(
-    """
-    <div class="footer">
-        <p><span style="font-size: 14px;">Desenvolvido pela Equipe Epsilon - Junho de 2024 • Universidade do Distrito Federal</span></p>
-        <p><span style="font-size: 12px;"><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></span></p>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+start()
