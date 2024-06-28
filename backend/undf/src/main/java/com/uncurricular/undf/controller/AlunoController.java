@@ -6,6 +6,8 @@ import com.uncurricular.undf.model.Turma;
 import com.uncurricular.undf.model.TurmaAluno;
 import com.uncurricular.undf.repository.AlunoRepository;
 import com.uncurricular.undf.repository.TurmaAlunoRepository;
+import com.uncurricular.undf.repository.TurmaRepository;
+import com.uncurricular.undf.repository.FeedbackRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,6 +24,9 @@ public class AlunoController {
 
     @Autowired
     private TurmaAlunoRepository turmaAlunoRepository;
+
+    @Autowired
+    private TurmaRepository turmaRepository;
 
     @GetMapping
     public List<Aluno> findAll(){
