@@ -36,6 +36,11 @@ public class FeedbackController {
         return feedbackRepository.findFeedbackByAlunoId(aluno_id);
     }
 
+    @GetMapping("/turma/{turma_id}")
+    public List<Feedback> findFeedbacksByTurmaId(@PathVariable Long turma_id) {
+        return feedbackRepository.findFeedbacksByTurmaId(turma_id);
+    }
+
     @PostMapping("/aluno/post/{aluno_id}")
     public Feedback createFeedback(@RequestBody Feedback feedback) {
         return null;

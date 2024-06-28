@@ -18,7 +18,6 @@ public class Feedback {
 
     @ManyToOne
     private Aluno aluno;
-
     private String titulo;
     private String corpo;
 
