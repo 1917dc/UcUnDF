@@ -97,6 +97,7 @@ def feedback_modal():
             if enviado:
                 st.session_state['show_feedback_modal'] = False
                 enviar_feedback(titulo, corpo)
+                st.rerun()
 
 def enviar_feedback(titulo, corpo):
     # Preparando os dados para envio
